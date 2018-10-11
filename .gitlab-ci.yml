@@ -6,7 +6,7 @@ build:
   image: aergus/latex
   stage: build
   script:
-    - latexmk -pdf ${FILE_NAME}.tex
+    - latexmk -xelatex -pdf ${FILE_NAME}.tex
   artifacts:
     paths:
       - ${FILE_NAME}.pdf
