@@ -1,0 +1,25 @@
+image: alpine
+stages:
+  - build
+  - deploy
+build:
+  image: aergus/latex
+  stage: build
+  script:
+    - latexmk -pdf ${FILE_NAME}
+  artifacts:
+    paths:
+      - ${FILE_NAME}.pdf
+  only:
+    - master
+    - dev
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - cp ${FILE_NAME}.pdf public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
