@@ -45,10 +45,28 @@
 \parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
 	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
 	\centering % Centre text
-	{\sffamily\Huge Dr. Gordon Freeman}\\\medskip % Your name
+	{\sffamily\Huge Ali Sorour Amini}\\\medskip % Your name
 	{\Huge\color{headings}\cvtextfont Curriculum Vitae}
 }
 
+\switchcolumn % Switch to the next paracol column
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & P.O. Box 3985, Black Mesa Drive, NM 87545 \\ % Address
+			\raisebox{-1pt}{\faPhone} & +98 (939) 599-2486 \\ % Phone number
+      \raisebox{0pt}{\small\faEnvelope} & \href{mailto:ali.sorouramini@ut.ac.ir}{ali.sorouramini@ut.ac.ir} \\ % Email address
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:ali.sorouramini@gmail.com}{ali.sorouramini@gmail.com} \\ % Email address
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+\end{paracol}
+\begin{paracol}{2} % Begin the multi-column environment
 %----------------------------------------------------------------------------------------
 %	MAJOR RESEARCH PROJECT
 %----------------------------------------------------------------------------------------
@@ -157,25 +175,6 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 %----------------------------------------------------------------------------------------
 
 \switchcolumn % Switch to the next paracol column
-
-%----------------------------------------------------------------------------------------
-%	COLOURED CONTACT DETAILS BOX
-%----------------------------------------------------------------------------------------
-
-\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
-	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
-	\colorbox{shade}{ % Create the coloured box
-		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
-			\raisebox{-1pt}{\faHome} & P.O. Box 3985, Black Mesa Drive, NM 87545 \\ % Address
-			\raisebox{-1pt}{\faPhone} & +1 (800) 786-1410 \\ % Phone number
-			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:g.freeman@bmrf.us}{g.freeman@bmrf.us} \\ % Email address
-			\raisebox{-1pt}{\small\faDesktop} & \href{https://www.LaTeXTemplates.com}{https://www.LaTeXTemplates.com} \\ % Website
-			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
-			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
-			% See fontawesome.pdf in the fonts folder for all icons you can use
-		\end{supertabular}
-	}
-}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -397,8 +396,6 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 %----------------------------------------------------------------------------------------
 
-\end{paracol}
-
 %----------------------------------------------------------------------------------------
-
+\end{paracol}
 \end{document}
