@@ -45,10 +45,27 @@
 \parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
 	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
 	\centering % Centre text
-	{\sffamily\Huge Dr. Gordon Freeman}\\\medskip % Your name
+	{\sffamily\Huge Ali Sorour Amini}\\\medskip % Your name
 	{\Huge\color{headings}\cvtextfont Curriculum Vitae}
 }
 
+\switchcolumn % Switch to the next paracol column
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & \\ % Address
+			\raisebox{-1pt}{\faPhone} & +98 (939) 599-2486 \\ % Phone number
+      \raisebox{0pt}{\small\faEnvelope} & \href{mailto:ali.sorouramini@ut.ac.ir}{ali.sorouramini@ut.ac.ir} \\ % Email address
+			\raisebox{-1pt}{\faGithub} & \href{https://github.com/AliSoAm}{https://github.com/AliSoAm} \\ % GitHub profile
+			\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/AliSoAm}{https://www.linkedin.com/in/AliSoAm} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+\end{paracol}
+\begin{paracol}{2} % Begin the multi-column environment
 %----------------------------------------------------------------------------------------
 %	MAJOR RESEARCH PROJECT
 %----------------------------------------------------------------------------------------
@@ -128,12 +145,11 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 	%------------------------------------------------
 
-	\tableentry{}{\textbf{Dr. Isaac Kleiner}}{spaceafter}
-	\tableentry{Position}{Professor}{}
-	\tableentry{Employer}{\href{http://web.mit.edu/physics/}{Department of Physics}}{}
-	\tableentry{}{\href{https://web.mit.edu}{\textit{Massachusetts Institute of Technology}}}{spaceafter}
-	\tableentry{Phone}{+1 (617) 253 1000 x5322 (Work)}{}
-	\tableentry{Mobile}{+1 (232) 842-3583}{}
+	\tableentry{}{\textbf{Dr. Vahid Shahmansouri}}{spaceafter}
+	\tableentry{Position}{Assistant Professor}{}
+	\tableentry{Employer}{\href{http://ece.ut.ac.ir/}{School of Electrical and Computer Engineering}}{}
+	\tableentry{}{\href{https://ut.ac.ir}{\textit{University of Tehran}}}{spaceafter}
+	\tableentry{Email}{\href{vmansouri@ut.ac.ir}{vmansouri@ut.ac.ir}}{}
 
 	%------------------------------------------------
 
@@ -141,12 +157,11 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 	%------------------------------------------------
 
-	\tableentry{}{\textbf{Dr. Eli Vance}}{spaceafter}
-	\tableentry{Position}{Scientist (HL1)}{}
-	\tableentry{Employer}{\href{http://www.bmrf.us}{Black Mesa Research Facility}}{spaceafter}
-	\tableentry{Email}{\href{mailto:e.vance@bmrf.us}{e.vance@bmrf.us}}{}
-	\tableentry{Phone}{+1 (800) 786-1410 x6235 (Work)}{}
-	\tableentry{Mobile}{+1 (201) 632-3901}{}
+	\tableentry{}{\textbf{Dr. Mahdi Davarpanah}}{spaceafter}
+	\tableentry{Position}{Assistant Professor}{}
+	\tableentry{Employer}{\href{http://ece.ut.ac.ir/}{School of Electrical and Computer Engineering}}{}
+	\tableentry{}{\href{https://ut.ac.ir}{\textit{University of Tehran}}}{spaceafter}
+	\tableentry{Email}{\href{m.davarpanah@ut.ac.ir}{m.davarpanah@ut.ac.ir}}{}
 
 	%------------------------------------------------
 
@@ -157,25 +172,6 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 %----------------------------------------------------------------------------------------
 
 \switchcolumn % Switch to the next paracol column
-
-%----------------------------------------------------------------------------------------
-%	COLOURED CONTACT DETAILS BOX
-%----------------------------------------------------------------------------------------
-
-\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
-	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
-	\colorbox{shade}{ % Create the coloured box
-		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
-			\raisebox{-1pt}{\faHome} & P.O. Box 3985, Black Mesa Drive, NM 87545 \\ % Address
-			\raisebox{-1pt}{\faPhone} & +1 (800) 786-1410 \\ % Phone number
-			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:g.freeman@bmrf.us}{g.freeman@bmrf.us} \\ % Email address
-			\raisebox{-1pt}{\small\faDesktop} & \href{https://www.LaTeXTemplates.com}{https://www.LaTeXTemplates.com} \\ % Website
-			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
-			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
-			% See fontawesome.pdf in the fonts folder for all icons you can use
-		\end{supertabular}
-	}
-}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -199,27 +195,19 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 	%------------------------------------------------
 
-	\educationentry{1986 -- 1990} % Duration
-	{Doctor of Philosophy} % Degree
-	{} % Honours, achievements or distinctions (e.g. first class honours)
-	{Theoretical Physics} % Department
-	{Massachusetts Institute of Technology} % Institution
-
-	%------------------------------------------------
-
-	\educationentry{1985} % Duration
+	\educationentry{2016 -- present} % Duration
 	{Master of Science} % Degree
-	{First Class Honours} % Honours, achievements or distinctions (e.g. first class honours)
-	{Theoretical Physics} % Department
-	{Massachusetts Institute of Technology} % Institution
+	{} % Honours, achievements or distinctions (e.g. first class honours)
+	{Electrical Engineering - Communications Networks} % Department
+	{University of Tehran} % Institution
 
 	%------------------------------------------------
 
-	\educationentry{1982 -- 1984} % Duration
-	{Bachelor of Physics} % Degree
-	{} % Honours, achievements or distinctions (e.g. first class honours)
-	{Department of Physics} % Department
-	{The University of Washington} % Institution
+	\educationentry{2008 -- 2012} % Duration
+	{Bachelor of Science} % Degree
+	{}
+	{Electrical Engineering - Communications}
+	{University of Tehran} % Institution
 
 	%------------------------------------------------
 
@@ -244,13 +232,9 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 	%------------------------------------------------
 
-	\tableentry{1985}{\textbf{Faculty of Science Masters Scholarship}}{}
-	\tableentry{}{\textit{Massachusetts Institute of Technology}}{spaceafter}
-
-	%------------------------------------------------
-
-	\tableentry{1983}{\textbf{Top Achiever Award -- Physics}}{}
-	\tableentry{}{\textit{The University of Washington}}{spaceafter}
+	\tableentry{2016}{\textbf{M.Sc. Fellowship Award}}{}
+	\tableentry{}{Exceptional Talented Student}{}
+	\tableentry{}{\textit{University of Tehran}}{spaceafter}
 
 	%------------------------------------------------
 
@@ -275,17 +259,15 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 	%------------------------------------------------
 
-	\tableentry{Beginner}{Java, MS DOS}{spaceafter}
+	\tableentry{Beginner}{}{spaceafter}
 
 	%------------------------------------------------
 
-	\tableentry{Intermediate}{Javascript, Python, HTML, CSS,}{}
-	\tableentry{}{Microsoft Windows}{}
-	\tableentry{}{Computer Hardware \& Support}{spaceafter}
+	\tableentry{Intermediate}{\LaTeX, Javascript, HTML, CSS,}{spaceafter}
 
 	%------------------------------------------------
 
-	\tableentry{Expert}{Perl, Unix, \LaTeX}{spaceafter}
+	\tableentry{Expert}{C/C++, Python, Git, Linux}{spaceafter}
 
 	%------------------------------------------------
 
@@ -294,33 +276,6 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 %----------------------------------------------------------------------------------------
 %	COMMUNICATION SKILLS
 %----------------------------------------------------------------------------------------
-
-\section{Communication Skills}
-
-% Example \tableentry{} command to add another line:
-
-%\tableentry{Heading}{Content}{spaceafter}
-
-% All 3 parameters must be supplied but any can be empty if you don't need them
-% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
-
-%------------------------------------------------
-
-\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
-
-	%------------------------------------------------
-
-	\tableentry{Conferences}{Oral Presentation at the Annual MIT}{}
-	\tableentry{}{Theoretical Physics Conference -- 1987}{spaceafter}
-
-	%------------------------------------------------
-
-	\tableentry{Posters}{Poster at the Meeting of the American}{}
-	\tableentry{}{Physical Society -- 1985}{spaceafter}
-
-	%------------------------------------------------
-
-\end{supertabular}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS DESCRIPTION
@@ -397,8 +352,6 @@ My research examined the use of ELW pulses from a mode-locked source array induc
 
 %----------------------------------------------------------------------------------------
 
-\end{paracol}
-
 %----------------------------------------------------------------------------------------
-
+\end{paracol}
 \end{document}
