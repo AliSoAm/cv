@@ -12,7 +12,7 @@
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
@@ -44,7 +44,7 @@
 
 \usepackage{paracol} % Required for creating multi-column layouts that can span pages automatically
 
-\columnratio{0.55,0.45} % The relative ratios of the two columns in the CV
+\columnratio{0.5,0.5} % The relative ratios of the two columns in the CV
 
 \setlength\columnsep{0.05\textwidth} % Specify the amount of space between the columns
 
@@ -130,11 +130,14 @@ SmallCapsFont=*-SC.ttf
 }
 
 % Command for entering a separate qualification
-\newcommand{\educationentry}[5]{
+\newcommand{\educationentry}[8]{
 	\textsc{#1} & \textbf{#2}\\ % Duration and degree
 	\expandafter\ifstrequal\expandafter{#3}{}{}{& {\small\textsc{#3}}\\} % Honours, achievements or distinctions (e.g. first class honours)
-	\expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\} % Department
-	\expandafter\ifstrequal\expandafter{#5}{}{}{& \textit{#5}\\[6pt]} % Institution
+	\expandafter\ifstrequal\expandafter{#4}{}{}{& {\small\textsc{#4}}\\}
+	\expandafter\ifstrequal\expandafter{#5}{}{}{& {\small\textsc{#5}}\\} % Department
+	\expandafter\ifstrequal\expandafter{#6}{}{}{& \small\textsc{GPA: #6}\\} % GPA
+	\expandafter\ifstrequal\expandafter{#7}{}{}{& \small\textsc{Thesis Title: #7}\\} % Department
+	\expandafter\ifstrequal\expandafter{#8}{}{}{& \textit{#8}\\[6pt]} % Institution
 }
 
 % Command for entering a separate table row -- used as a generic visual element for any section that uses a two column table
