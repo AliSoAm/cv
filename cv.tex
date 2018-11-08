@@ -1,127 +1,29 @@
 \documentclass[10pt]{article}
 
 \input{structure.tex}
-\usepackage{multicol}
+\makeatletter
+\def\input@path{{./sections/}}
+\usepackage{enumitem}
 \begin{document}
-
-  \begin{paracol}{2}
-    \parbox[top][0.12\textheight][c]{\linewidth}{
-      \vspace{-0.04\textheight}
-      \centering
-      {\sffamily\Huge Ali Sorour Amini}\\\medskip
-      {\Huge\color{headings}\cvtextfont Curriculum Vitae}
-    }
-
-    \switchcolumn
-
-    \parbox[top][0.12\textheight][c]{\linewidth}{
-      \vspace{-0.04\textheight}
-      \colorbox{shade}{
-        \begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}}
-          \raisebox{-1pt}{\faHome} & \\
-          \raisebox{-1pt}{\faPhone} & +98 (939) 599-2486 \\
-          \raisebox{0pt}{\small\faEnvelope} & \href{mailto:ali.sorouramini@ut.ac.ir}{ali.sorouramini@ut.ac.ir} \\
-          \raisebox{-1pt}{\faGithub} & \href{https://github.com/AliSoAm}{https://github.com/AliSoAm} \\
-          \raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/AliSoAm}{https://www.linkedin.com/in/AliSoAm} \\
-        \end{supertabular}
-      }
-    }
-  \end{paracol}
+  \input{header.tex}
+  \vspace{-20pt}
   \begin{paracol}{2}
     \section{Education}
-      \begin{supertabular}{rl}
-        \educationentry{2016 -- present}
-          {Master of Science}
-          {}
-          {Electrical Engineering}
-          {Communications Networks}
-          {18.15/20~(3.77/4)}
-          {}
-          {University of Tehran}
-        \educationentry{2008 -- 2012}
-          {Bachelor of Science}
-          {}
-          {Electrical Engineering}
-          {Communications}
-          {18.22/20~(?/4)}
-          {}
-          {University of Tehran}
-      \end{supertabular}
-      \medskip
+      \input{educations.tex}
     \section{Awards}
-      \begin{supertabular}{rl}
-        \tableentry{2016}{\textbf{M.Sc. Fellowship Award}}{}
-        \tableentry{}{Exceptional Talented Student}{}
-        \tableentry{}{\textit{University of Tehran}}{spaceafter}
-      \end{supertabular}
-      \medskip
+      \input{awards.tex}
     \section{Research Interests}
-      \begin{multicols}{2}
-        \begin{itemize}
-          \item Machine Learning
-          \item Game Theory
-          \item Distributed Algorithms
-          \item Optimization
-          \item Network Function Virtualization
-          \item Big Data
-        \end{itemize}
-      \end{multicols}
-      \medskip
-
-    \section{Work Experience}
-      \workposition{from Jun 2016}
-      {PT}
-      {ESFA Lab-University of Tehran}
-      {M.Sc. student, Researcher}
-      {
-        Design and development of a measurement device used to identify phase id (R, S, T) of electrical system subscribers under supervision of \textbf{Dr. Mahdi Davarpanah}.
-        I 
-        In pilot stage 70000 subscribers has been measured.
-      }
-      \medskip
-      \workposition{Jan 2015 -- Jan 2016}
-      {PT}
-      {Array Processing Lab-University of Tehran}
-      {B.Sc. student, Research Assistant}
-      {
-        Designing and implementing a wireless communication link using SDR board based on Xilinx ZYNQ 7020 and analyzing among different modulations;
-        Under supervision of \textbf{Dr. Aliazam Abbasfar}.
-      }
-      \vspace{-\baselineskip}
-      \medskip
-
-    \switchcolumn
+      \input{research_interests.tex}
     \section{Computer Skills}
-      \begin{supertabular}{rl}
-        \tableentry{Beginner}{}{spaceafter}
-        \tableentry{Intermediate}{\LaTeX, Javascript, HTML, CSS,}{spaceafter}
-        \tableentry{Expert}{C/C++, Python, Git, Linux, Matlab}{spaceafter}
-      \end{supertabular}
-      \medskip
-    \section{Skills}
-      \longformdescription{Goal Oriented}{I believe in action over long-winded discussions. I listen to everyone's viewpoints and use my judgement to immediately act based on consensus to achieve goals quickly and efficiently.}
-
-      \longformdescription{Physical Dexterity}{Manual manipulation of experimental equipment and training within Black Mesa (e.g. the Hazard Course) have contributed to an enjoyment of working with my hands.}
-
-      \longformdescription{Passionate}{I have been interested in theoretical physics such as quantum mechanics and relativity from an early age. My education and research have cemented this interest into a passion. I greatly enjoy carrying out fundamental physics research with potential practical applications.}
-      \medskip
-    \section{Publications}
-      \longformpublication{\textbf{Freeman, G. R.} (1996). Chemistry of Multiply Charged Negative Molecular Ions and Clusters in the Gas Phase:  Terrestrial and in Intense Galactic Magnetic Fields. \textit{The Journal of Physical Chemistry}, \textit{100}(11), 4331-4338.}
-
-      \medskip
+      \input{computer_skills.tex}
+    \section{Selected Courses}
+      \input{selected_courses.tex}
+    \section{Teaching Experiences}
+      \input{teaching_experiences.tex}
+    \switchcolumn
+    \section{Research and Lab Experience}
+      \input{workpositions.tex}
     \section{References}
-      \begin{supertabular}{rl}
-        \tableentry{}{\textbf{Dr. Vahid Shahmansouri}}{spaceafter}
-        \tableentry{Position}{Assistant Professor}{}
-        \tableentry{Employer}{\href{http://ece.ut.ac.ir/}{School of Electrical and Computer Engineering}}{}
-        \tableentry{}{\href{https://ut.ac.ir}{\textit{University of Tehran}}}{spaceafter}
-        \tableentry{Email}{\href{mailto:vmansouri@ut.ac.ir}{vmansouri@ut.ac.ir}}{}
-        \tableentry{}{}{}
-        \tableentry{}{\textbf{Dr. Mahdi Davarpanah}}{spaceafter}
-        \tableentry{Position}{Assistant Professor}{}
-        \tableentry{Employer}{\href{http://ece.ut.ac.ir/}{School of Electrical and Computer Engineering}}{}
-        \tableentry{}{\href{https://ut.ac.ir}{\textit{University of Tehran}}}{spaceafter}
-        \tableentry{Email}{\href{mailto:m.davarpanah@ut.ac.ir}{m.davarpanah@ut.ac.ir}}{}
-      \end{supertabular}
+      \input{references.tex}
   \end{paracol}
 \end{document}
