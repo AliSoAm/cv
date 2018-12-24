@@ -6,10 +6,15 @@ build:
   image: aergus/latex
   stage: build
   script:
-    - latexmk -pdf ${FILE_NAME}.tex
+    - cd english_cv
+    - latexmk -pdf cv.tex
+    - cd ../farsi_resume1
+    - latexmk -pdf farsi_resume1.tex
+    - cd ..
   artifacts:
     paths:
-      - ${FILE_NAME}.pdf
+      - ./english_cv/cv.pdf
+      - ./farsi_resume1/farsi_resume1.pdf
   only:
     - master
     - dev
@@ -17,7 +22,8 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - cp ${FILE_NAME}.pdf public
+    - cp ./english_cv/cv.pdf public
+    - cp ./farsi_resume1/farsi_resume1.pdf public
   artifacts:
     paths:
       - public
