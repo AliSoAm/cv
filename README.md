@@ -1,4 +1,4 @@
-My CV:
+My CV
 ======
 
 [Persian](https://alisoam.github.io/cv/farsi_resume.pdf)
