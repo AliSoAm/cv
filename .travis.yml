@@ -4,8 +4,8 @@ services: docker
 
 script:
   - mkdir public
-  - docker run --rm -v ./english_cv:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf english_cv.tex"
-  - docker run --rm -v ./farsi_resume:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf farsi_resume.tex"
+  - docker run --rm -v english_cv:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf english_cv.tex"
+  - docker run --rm -v farsi_resume:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf farsi_resume.tex"
   - cp english_cv/english_cv.pdf public
   - cp farsi_resume/farsi_resume.pdf public
 
