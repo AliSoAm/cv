@@ -7,14 +7,14 @@ build:
   stage: build
   script:
     - cd english_cv
-    - latexmk -pdf cv.tex
-    - cd ../farsi_resume1
-    - latexmk -pdf farsi_resume1.tex
+    - latexmk -pdf english_cv.tex
+    - cd ../farsi_resume
+    - latexmk -pdf farsi_resume.tex
     - cd ..
   artifacts:
     paths:
-      - ./english_cv/cv.pdf
-      - ./farsi_resume1/farsi_resume1.pdf
+      - ./english_cv/english_cv.pdf
+      - ./farsi_resume/farsi_resume.pdf
   only:
     - master
     - dev
@@ -22,8 +22,8 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - cp ./english_cv/cv.pdf public
-    - cp ./farsi_resume1/farsi_resume1.pdf public
+    - cp ./english_cv/english_cv.pdf public
+    - cp ./farsi_resume/farsi_resume.pdf public
   artifacts:
     paths:
       - public
