@@ -5,11 +5,14 @@ services: docker
 script:
   - mkdir public
   - mkdir public/english
-  - mkdir public/farsi
+  - mkdir public/farsi1
+  - mkdir public/farsi2
   - docker run --rm -v $(pwd)/english_cv:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf english_cv.tex"
   - docker run --rm -v $(pwd)/farsi_resume1:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf farsi_resume.tex"
+  - docker run --rm -v $(pwd)/farsi_resume2:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf farsi_resume.tex"
   - cp english_cv/english_cv.pdf public/english/ali_sorouramini.pdf
   - cp farsi_resume1/farsi_resume.pdf public/farsi1/ali_sorouramini.pdf
+  - cp farsi_resume2/farsi_resume.pdf public/farsi2/ali_sorouramini.pdf
 
 deploy:
   provider: pages
