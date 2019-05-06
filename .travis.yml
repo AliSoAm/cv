@@ -7,9 +7,9 @@ script:
   - mkdir public/english
   - mkdir public/farsi1
   - mkdir public/farsi2
-  - docker run --rm -v $(pwd)/english_cv:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf english_cv.tex"
-  - docker run --rm -v $(pwd)/farsi_resume1:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf farsi_resume.tex"
-  - docker run --rm -v $(pwd)/farsi_resume2:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf farsi_resume.tex"
+  - docker run --rm -v $(pwd)/english_cv:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf ali_sorouramini.tex"
+  - docker run --rm -v $(pwd)/farsi_resume1:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf ali_sorouramini.tex"
+  - docker run --rm -v $(pwd)/farsi_resume2:/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf ali_sorouramini.tex"
   - cp english_cv/ali_sorouramini.pdf public/english/ali_sorouramini.pdf
   - cp farsi_resume1/ali_sorouramini.pdf public/farsi1/ali_sorouramini.pdf
   - cp farsi_resume2/ali_sorouramini.pdf public/farsi2/ali_sorouramini.pdf
