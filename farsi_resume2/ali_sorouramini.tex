@@ -1,21 +1,22 @@
-% !TEX TS-program = XeLaTeX
-% Commands for running this example:
-% 	 xelatex Amintoosi_CV
-% 	bibtex8 -W -c cp1256fa Amintoosi_CV
-% 	xelatex Amintoosi_CV
-% 	xelatex Amintoosi_CV
-% End of Commands
 \documentclass[11pt,a4paper]{bidimoderncv}
-% M.Amintoosi
-% برای اجرا باید دنباله کارهای زیر را انجام دهید:
-
 \usepackage[numbers]{natbib}%
-%\setlength{\bibhang}{2em}
-
-\cvtheme[blue]{bidiclassic}%casual}
+\usepackage{tikz}
+\usepackage{lipsum}
 \usepackage{pifont}
-%\usepackage[scale=0.8]{geometry}
 \usepackage{xepersian}
+
+\newcommand\versionAndDateText{%
+  \footnotesize{
+    Hash: NA \\
+    Updated at: NA
+  }
+}
+\newcommand\printVersionAndDate{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south,yshift=0pt] at (current page.south) {\parbox{\dimexpr\textwidth-\fboxsep-\fboxrule\relax}{\versionAndDateText}};
+  \end{tikzpicture}%
+}
+\cvtheme[blue]{bidiclassic}%casual}
 \settextfont[Scale=1]{XB_Niloofar.ttf}%{B Nazanin}%
 \setdigitfont{XB_Niloofar.ttf}%{B Nazanin}%
 \setlatintextfont[Scale=1]{LinLibertine_RBIah.ttf}%{Linux Libertine}%{Times New Roman}%
@@ -26,16 +27,15 @@
 \firstname{\mytitlefont علی}
 \familyname{\mytitlefont سرور‌امینی\hspace*{10mm}}
 \resumename{رزومه فارسی ۱}
-%\address{ایران تهران}
 \mobile{۰۹۳۹۵۹۹۲۴۸۶}
 \email{ali.sorouramini@gmail.com}
 \extrainfo{\httplink[https://AliSoAm.github.io]{AliSoAm.github.io}}
-
 
 %\photo[70pt]{mAmintoosi.jpg}
 \begin{document}
   \maketitle
   \vspace{-5mm}
+  \printVersionAndDate
 
   \section{تحصیلات}
     \cventry{۱۳۹۱-۱۳۹۵}{کارشناسی}{دانشگاه تهران}{ تهران}{}{مهندسی برق (مخابرات)}

@@ -6,11 +6,7 @@ build:
   image: aergus/latex
   stage: build
   script:
-    - cd english_cv
-    - latexmk -pdf english_cv.tex
-    - cd ../farsi_resume
-    - latexmk -pdf farsi_resume.tex
-    - cd ..
+    - bash build.sh
   artifacts:
     paths:
       - ./english_cv/english_cv.pdf
