@@ -11,8 +11,8 @@ for dir in *; do
   if [[ -d $dir ]] && [[ "$dir" != "public" ]]; then
     echo "Entering ${dir}"
     cd ${dir}
-    sed -i "s/Hash: NA/Hash: ${GIT_COMMIT_HASH}/g" ali_sorouramini.tex
-    sed -i "s/Updated at: NA/Updated at: ${GIT_COMMIT_DATE}/g" ali_sorouramini.tex
+    sed -i "s/Hash: NA/Hash: \\\\lr{${GIT_COMMIT_HASH}}/g" ali_sorouramini.tex
+    sed -i "s/Updated at: NA/Updated at: \\\\lr{${GIT_COMMIT_DATE}}/g" ali_sorouramini.tex
     docker run --rm -v $(pwd):/tex aergus/latex /bin/sh -c "cd /tex; latexmk -pdf ali_sorouramini.tex"
     mkdir -p ../public/${dir}
     cp ali_sorouramini.pdf ../public/${dir}
