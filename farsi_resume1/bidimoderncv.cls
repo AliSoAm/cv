@@ -5,18 +5,18 @@
 %% The original source files were:
 %%
 %% bidi.dtx  (with options: `table,bidimoderncv.cls')
-%% 
+%%
 %%   __________________________________________________
 %%   Copyright (c) 2009--2018  Vafa Khalighi <persian-tex@tug.org>
-%% 
+%%
 %%   It may be distributed and/or modified under the LaTeX Project Public License,
 %%   version 1.3c or higher (your choice). The latest version of
 %%   this license is at: http://www.latex-project.org/lppl.txt
-%% 
+%%
 %%   This work is “author-maintained” (as per LPPL maintenance status)
 %%   by Vafa Khalighi.
-%% 
-%% 
+%%
+%%
 %% \CheckSum{49766}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
