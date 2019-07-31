@@ -5,13 +5,12 @@
 \def\input@path{{./sections/}}
 \usepackage{enumitem}
 \begin{document}
+  \printVersionAndDate
   \input{header.tex}
   \vspace{-20pt}
   \begin{paracol}{2}
     \section{Education}
       \input{educations.tex}
-    \section{Awards}
-      \input{awards.tex}
     \section{Research Interests}
       \input{research_interests.tex}
     \section{Computer Skills}
@@ -21,9 +20,11 @@
     \section{Teaching Experiences}
       \input{teaching_experiences.tex}
     \switchcolumn
+%    \section{Awards}
+%      \input{awards.tex}
     \section{Research and Lab Experience}
       \input{workpositions.tex}
-%    \section{References}
-%      \input{references.tex}
+    \section{References}
+      \input{references.tex}
   \end{paracol}
 \end{document}
