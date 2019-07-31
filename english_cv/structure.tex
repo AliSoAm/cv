@@ -163,3 +163,18 @@ SmallCapsFont=*-SC.ttf
   \raggedright\expandafter\ifstrequal\expandafter{#4}{}{}{\raggedright Instructor: {\textbf{#4}} \\}
   [4pt]
 }
+
+\usepackage{tikz}
+
+\newcommand\versionAndDateText{%
+  \footnotesize{
+    Updated at: NA  \\
+    Hash: NA
+  }
+}
+
+\newcommand\printVersionAndDate{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south,yshift=0pt] at (current page.south) {\parbox{\dimexpr\textwidth-\fboxsep-\fboxrule\relax}{\versionAndDateText}};
+  \end{tikzpicture}%
+}
