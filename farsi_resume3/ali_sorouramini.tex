@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{bidimoderncv}
+\usepackage[numbers]{natbib}%
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{pifont}
+\usepackage{xepersian}
+
+\newcommand\versionAndDateText{%
+  \footnotesize{
+    Updated at: NA  \\
+    Hash: NA
+  }
+}
+\newcommand\printVersionAndDate{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south,yshift=0pt] at (current page.south) {\parbox{\dimexpr\textwidth-\fboxsep-\fboxrule\relax}{\versionAndDateText}};
+  \end{tikzpicture}%
+}
+\cvtheme[blue]{bidiclassic}%casual}
+\settextfont[Scale=1]{XB_Niloofar.ttf}%{B Nazanin}%
+\setdigitfont{XB_Niloofar.ttf}%{B Nazanin}%
+\setlatintextfont[Scale=1]{LinLibertine_R.ttf}%{Linux Libertine}%{Times New Roman}%
+%\defpersianfont\nastaliq[Scale=1.2]{IranNastaliq}
+\defpersianfont\mytitlefont[Scale=.8]{XB_Zar.ttf}
+
+\AtBeginDocument{\recomputelengths}
+\firstname{\mytitlefont علی}
+\familyname{\mytitlefont سرور‌امینی\hspace*{10mm}}
+\resumename{رزومه فارسی ۱}
+\mobile{۰۹۳۹۵۹۹۲۴۸۶}
+\email{ali.sorouramini@gmail.com}
+\extrainfo{\httplink[https://me.sosori.ir]{https://me.sosori.ir}}
+
+%\photo[70pt]{mAmintoosi.jpg}
+\begin{document}
+  \maketitle
+  \printVersionAndDate
+  \vspace{-5mm}
+  \section{تحصیلات}
+    \cventry{۱۳۹۱-۱۳۹۵}{کارشناسی}{دانشگاه تهران}{دانشکده مهندسی برق و کامپیوتر}{}{مهندسی برق (مخابرات) معدل ۱۸٫۲۱}
+    \cventry{۱۳۹۵-۱۳۹۸}{کارشناسی ارشد}{دانشگاه تهران}{دانشکده مهندسی برق و کامپیوتر}{}{مهندسی برق (شبکه‌های مخابراتی) معدل ۱۸٫۱۸}
+  \vspace{-5mm}
+  \section{دروس منتخب}
+    \cvline{کارشناسی}{برنامه‌ نویسی پیشرفته (۲۰)، شبکه‌های کامپیوتری (۲۰)، مدار منطقی (۲۰)، ریزپردازنده(۲۰)}
+    \cvline{کارشناسی ارشد}{کلان داده (۱۹)،‌ بازشناسی الگو (۱۹)، شبکه‌های مخابرات داده (۱۹٫۷۵)}
+
+  \vspace{-5mm}
+  \section{مهارت‌ها}
+    \cvlistitem{مسلط به زبان‌های برنامه نویسی \lr{C/C++}، \lr{Python} و \lr{Go}}
+    \cvlistitem{مسلط به سیستم‌عامل لینوکس}
+    \cvlistitem{مسلط به \lr{Docker}، \lr{Kubernetes} و \lr{OpenStack}}
+    \cvlistitem{آشنایی با \lr{‌Bash Scripting}}
+    \cvlistitem{آشنایی با \lr{Elastic Search}، \lr{‌Hadoop} و \lr{Spark}}
+    \cvlistitem{آشنایی با زبان‌های برنامه‌نویسی \lr{Ruby}، \lr{Javascript} و \lr{Lua}}
+    \cvlistitem{آشنایی با \lr{HTML} و \lr{CSS}}
+    \cvlistitem{آشنایی با نرم‌افزار کنترل نسخه \lr{Git}}
+    \cvlistitem{آشنایی با \lr{Travis CI} و \lr{Gitlab CI}}
+    \cvlistitem{آشنایی با برنامه‌نویسی هسته لینوکس}
+    \cvlistitem{آشنایی با برنامه‌نویسی سوکت}
+    \cvlistitem{آشنایی با فریمورک  \lr{Ruby on Rails} , \lr{Django}}
+    \cvlistitem{مسلط به میکروکنترلرهای \lr{ARM} ساخت شرکت \lr{ST} و \lr{NXP} و برنامه نویسی در محیط \lr{ARM-MDK}}
+    \cvlistitem{آشنایی با نرم‌افزار \lr{Xilinx SDK} برای برنامه‌نویسی \lr{SoC}های  \lr{Zynq}}
+  \vspace{-5mm}
+  \section{پروژه‌های انجام شده}
+    \cvlistitem{   مشارکت در طراحی و ساخت دستگاه تشخیص نوع فاز در سیستم‌های الکتریکی سه‌فاز (تا تابستان 9۷)
+      \begin{itemize}
+        \item -
+          پیاده سازی سرور جمع‌آوری اطلاعات اندازه‌گیری شده  توسط دستگاه‌ها( \href{https://phaseyab.ir}{https://phaseyab.ir}) با استفاده از فریمورک \lr{RoR} و دیپلوی توسط \lr{docker} و انجام بخش‌های ارتباطی و انتقال داده‌ها به سرور با استفاده از پروتکل \lr{HTTP}.
+        \item -
+          پیاده‌سازی کلاینت \lr{HTTP} مناسب برای استفاده در دستگاه‌های نهفته در زبان \lr{C++} (قابل دسترس در \href{https://github.com/alisoam/http_client}{https://github.com/alisoam/http\_client}).
+        \item -
+          پیاده‌سازی دستگاه‌های سیار با استفاده از میکرو کنترلر \lr{LPC1768} و دستگاه‌های مرجع با استفاده از میکروکنترلر \lr{LPC4088}
+        \item -
+          پیاده‌سازی الگوریتم تخمین پالس \lr{GPS} در صورت عدم پوشش ماهواره‌ای بر روی میکرو کنترلر‌های \lr{NXP}.
+        \item -
+          فازیابی ۷۰۰۰۰ مشترک شبکه توزیع برق در فاز پایلوت.
+      \end{itemize}
+    }
+    \cvlistitem{مشارکت در طراحی و ساخت تابلو برق هوشمند تک فاز چهل آمپر(\lr{IPDU}) - (تا سال 96)
+      \begin{itemize}
+        \item -
+          دارای استاندار‌های \lr{EMC} طبق \lr{MIL-461}.
+        \item -
+          پیاده‌سازی سرور \lr{HTTP} مناسب برای استفاده در دستگاه‌های نهفته در زبان \lr{C++} (قابل دسترس در \href{https://github.com/alisoam/http_server}{https://github.com/alisoam/http\_server}).
+        \item -
+          پیاده‌سازی ارتباط بین برد‌ها با استفاده از پروتکل \lr{CAN}.
+        \item -
+          پیاده‌سازی برد اندازه‌گیری با استفاده از میکرو کنترلر \lr{LPC4088} و برد رابط کاربری با استفاده از میکروکنترلر \lr{LPC4357}.
+        \item -
+          پیاده‌سازی رابط گرافیکی با استفاده از کتابخانه \lr{EMWIN}.
+        \item -
+          قرائت ۳۲ کانال ۴ \lr{ADC} با استفاده از یک SPI و نرخ نمونه برداری ۲۰ کیلوهرتز برای هر کانال با استفاده از \lr{DMA}.
+      \end{itemize}
+    }
+
+  \vspace{-5mm}
+  \section{تألیفات}
+    \cvlistitem{تخصیص منابع پردازشی لبه در شبکه‌های اینترنت اشیاء (کنفرانس ملی انفورماتیک ایران)}
+    \cvlistitem{}
+
+  \vspace{-5mm}
+  \section{مسئولیت‌ها و سوابق کاری}
+    \cvlistitem{دستیار آموزشی درس مبانی کامپیوتر (پاییز ۹۴و ۹۵)}
+    \cvlistitem{دستیار آموزشی درس شبکه‌های کامپیوتری (بهار ۹۸)}
+    \cvlistitem{دستیار آموزشی  درس بازشناسی الگو (پاییز ۹۸)}
+    \cvlistitem{توسعه دهنده backend در شرکت کافه بازار (از مهر ۱۳۹۸)
+      \begin{itemize}
+        \item -
+          عضو تیم نگه‌داری و توسعه بخش ویدیو کافه بازار.
+        \item -
+          توسعه سیستم جدید تبلیغات ویدیو کافه بازارو.
+      \end{itemize}
+    }
+
+  \vspace{-5mm}
+  \section{سایر موارد}
+    \cvlistitem{رتبه ۲۳۷ منطقه ۱ کنکور سال ۱۳۹۰}
+    \cvlistitem{ورود بدون کنکور به مقطع کارشناسی ارشد دانشگاه تهران رشته مهندسی برق- شبکه‌های مخابراتی}
+\end{document}
